@@ -1,3 +1,6 @@
+/* styles.css */
+
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -9,6 +12,83 @@ body {
     color: #e0e0e0;
 }
 
+/* Navbar Styles */
+nav {
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: 1rem 2rem; /* Added more padding on the sides */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #333333;
+    border-radius: 5px;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #ffffff;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+.logo img {
+    height: 40px; /* Adjust the logo size */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        border-top: 1px solid #333333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .profile-container {
+        margin-top: 150px; /* Adjusted for mobile view */
+    }
+}
+
+/* Profile Container Styles */
 .profile-container {
     background-color: #1e1e1e;
     border-radius: 10px;
@@ -73,5 +153,161 @@ body {
     width: 24px;
     height: 24px;
     margin-right: 10px;
+}
+/* styles.css */
+
+/* General Body Styles */
+body {
+      font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #121212;
+        color: #e0e0e0;
+}
+
+/* Navbar Styles */
+nav {
+      width: 100%;
+        background-color: #1e1e1e;
+        padding: 1rem 2rem; /* Added more padding on the sides */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+}
+
+.nav-links {
+      display: flex;
+        gap: 1rem;
+}
+
+.nav-links a {
+      color: #ffffff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+      background-color: #333333;
+        border-radius: 5px;
+}
+
+.nav-toggle {
+      display: none;
+        flex-direction: column;
+        cursor: pointer;
+}
+
+.nav-toggle span {
+      height: 3px;
+        width: 25px;
+        background-color: #ffffff;
+        margin: 4px;
+        transition: 0.3s;
+}
+
+.logo img {
+      height: 40px; /* Adjust the logo size */
+}
+
+@media (max-width: 768px) {
+      .nav-links {
+        display: none;
+          flex-direction: column;
+          width: 100%;
+          text-align: center;
+      }
+
+      .nav-links a {
+        padding: 1rem;
+          border-top: 1px solid #333333;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      .profile-container {
+        margin-top: 150px; /* Adjusted for mobile view */
+      }
+}
+
+/* Profile Container Styles */
+.profile-container {
+      background-color: #1e1e1e;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        text-align: center;
+        width: 300px;
+        position: relative;
+        overflow: hidden; /* Ensure the profile picture stays within the container */
+        padding-bottom: 20px; /* Add padding to the bottom for spacing */
+}
+
+.banner {
+      width: 100%;
+        height: 150px; /* Adjust the height as needed */
+        overflow: hidden;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+}
+
+.banner img {
+      width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+}
+
+.profile-picture {
+      position: absolute;
+        top: 100px; /* Adjust top position as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #1e1e1e;
+        border-radius: 50%;
+        padding: 5px;
+        border: 2px solid #1e1e1e;
+}
+
+.profile-picture img {
+      width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 2px solid #e0e0e0;
+}
+
+.social-media-links {
+      display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 70px; /* Adjusted to accommodate the profile picture */
+        padding: 0 20px; /* Added padding to the sides for spacing */
+}
+
+.social-link {
+      display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #e0e0e0;
+        font-size: 18px;
+}
+
+.social-link img {
+      width: 24px;
+        height: 24px;
+        margin-right: 10px;
 }
 

@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
-    <link rel="stylesheet" href="https://liforra.de/https/styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the new CSS file -->
 </head>
 <body>
+    <nav>
+        <div class="logo">
+            <img src="../logo.jpg" alt="Logo"> <!-- Adjust the file name accordingly -->
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="../">Home</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
     <div class="profile-container">
         <div class="banner">
             <img src="./png/banner.png" alt="Banner Image">
@@ -18,6 +33,7 @@
             <a href="https://discord.gg/Bqvr4XDx/" class="social-link">
                 <img src="./svg/discord.svg" alt="Discord Icon">
                 Discord
+            </a>
             <a href="https://pronouns.page/@Liforra/" class="social-link">
                 <img src="./svg/pronounspage.svg" alt="Pronouns page Icon">
                 Pronouns Page
@@ -27,18 +43,28 @@
                 Twitter
             </a>
             <a href="https://www.youtube.com/channel/UCbPxks2nLLqz1KmM8YExUNg" class="social-link">
-                <img src="./svg/youtube.svg" alt="LinkedIn Icon">
-                Youtube
+                <img src="./svg/youtube.svg" alt="YouTube Icon">
+                YouTube
             </a>
             <a href="https://signal.me/#eu/p3PQjeCYexMXNqEvT2qMBCqFoRt1imo35VZsg9LVzFhq28Lfr7JH7Y9hObU5XSUS" class="social-link">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Signal_ultramarine_icon.svg" alt="Signal Icon">
                 Signal
             </a>
             <a href="https://www.snapchat.com/add/shwooshy/" class="social-link">
-                <img src="svg/snapchat.svg" alt="Snapchat Icon">
+                <img src="./svg/snapchat.svg" alt="Snapchat Icon">
                 Snapchat
+            </a>
         </div>
     </div>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
 
