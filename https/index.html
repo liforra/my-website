@@ -3,42 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
-    <link rel="stylesheet" href="https://liforra.de/https/styles.css">
+    <title>Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #1e1e1e;
+            padding: 1rem 2rem; /* Added more padding on the sides */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #333333;
+            border-radius: 5px;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            height: 3px;
+            width: 25px;
+            background-color: #ffffff;
+            margin: 4px;
+            transition: 0.3s;
+        }
+
+        .logo img {
+            height: 40px; /* Adjust the logo size */
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                padding: 1rem;
+                border-top: 1px solid #333333;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+    </style>
 </head>
 <body>
-    <div class="profile-container">
-        <div class="banner">
-            <img src="./png/banner.png" alt="Banner Image">
+
+    <nav>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo"> <!-- Adjust the file name accordingly -->
         </div>
-        <div class="profile-picture">
-            <img src="./jpg/profile.jpg" alt="Profile Picture">
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="social-media-links">
-            <a href="https://discord.gg/Bqvr4XDx/" class="social-link">
-                <img src="./svg/discord.svg" alt="Discord Icon">
-                Discord
-            <a href="https://pronouns.page/@Liforra/" class="social-link">
-                <img src="./svg/pronounspage.svg" alt="Pronouns page Icon">
-                Pronouns Page
-            </a>
-            <a href="https://twitter.com/Liforra2/" class="social-link">
-                <img src="./svg/twitter.svg" alt="Twitter Icon">
-                Twitter
-            </a>
-            <a href="https://www.youtube.com/channel/UCbPxks2nLLqz1KmM8YExUNg" class="social-link">
-                <img src="./svg/youtube.svg" alt="LinkedIn Icon">
-                Youtube
-            </a>
-            <a href="https://signal.me/#eu/p3PQjeCYexMXNqEvT2qMBCqFoRt1imo35VZsg9LVzFhq28Lfr7JH7Y9hObU5XSUS" class="social-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Signal_ultramarine_icon.svg" alt="Signal Icon">
-                Signal
-            </a>
-            <a href="https://www.snapchat.com/add/shwooshy/" class="social-link">
-                <img src="svg/snapchat.svg" alt="Snapchat Icon">
-                Snapchat
+        <div class="nav-links" id="navLinks">
+            <a href="liforra.de">Home</a>
+            <a href="./contact/">Contact</a>
         </div>
+    </nav>
+
+    <div class="container">
+        <h1>Work in Progress</h1>
     </div>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
 </body>
 </html>
 
