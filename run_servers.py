@@ -1,5 +1,4 @@
 import subprocess
-import os
 
 def run_gunicorn(command):
     process = subprocess.Popen(command, shell=True)
