@@ -1,0 +1,20 @@
+/* styles.css */
+
+/* Apply a grey background color to the whole page */
+body {
+    background-color: #202020; /* Grey background */
+    color: #FFFFFF; /* White text */
+    font-family: Arial, sans-serif; /* Optional: Sets a default font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Optional: Additional styling for headers and paragraphs */
+h1, h2, h3, h4, h5, h6 {
+    color: #FFFFFF; /* White text for all header tags */
+}
+
+p {
+    color: #FFFFFF; /* White text for paragraphs */
+}
+
